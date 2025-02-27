@@ -10,10 +10,10 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   const navItems = [
-    { name: 'Aceuille', url: '#', icon: Home },
+    { name: 'Accueil', url: '#home', icon: Home },
     { name: 'À propos', url: '#about', icon: User },
     { name: 'Projets', url: '#projects', icon: Briefcase },
-    { name: 'CV', url: '#', icon: FileText }
+    { name: 'Contact', url: '#contact', icon: FileText }
   ];
 
   return (

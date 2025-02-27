@@ -21,6 +21,36 @@ export function NavBar({
     return () => window.removeEventListener("resize", handleResize);
   }, [])
 
+  useEffect(() => {
+    const sections = items.map(item => document.querySelector(item.url))
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id
+          const activeItem = items.find(item => item.url === `#${sectionId}`)
+          if (activeItem) {
+            setActiveTab(activeItem.name)
+          }
+        }
+      })
+    }, { threshold: 0.5 })
+
+    sections.forEach(section => {
+      if (section) {
+        observer.observe(section)
+      }
+    })
+
+    return () => {
+      sections.forEach(section => {
+        if (section) {
+          observer.unobserve(section)
+        }
+      })
+    }
+  }, [items])
+
   return (
     <div className={cn("relative", className)}>
       <div className="flex items-center gap-3 py-1 px-1 rounded-full">
