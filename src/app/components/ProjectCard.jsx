@@ -1,19 +1,26 @@
 import React from "react";
+import Image from "next/image";
 
 const ProjectCard = ({ imgUrl, title, description }) => {
   return (
-    <div>
-      <div
-        className="h-52 md:h-72 rounded-t-xl relative group"
-        style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
-      >
-        <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 ">
-        
-        </div>
+    <div className="rounded-xl overflow-hidden shadow-lg bg-[#181818] w-full h-[400px] flex flex-col">
+      <div className="h-[250px] relative flex justify-center items-center">
+        <Image
+          alt={title}
+          className="object-cover"
+          src={imgUrl}
+          width={400}
+          height={250}
+          quality={75}
+          style={{
+            width: '100%',
+            height: '100%',
+          }}
+        />
       </div>
-      <div className="text-white rounded-b-xl mt-3 bg-[#181818] py-6 px-4">
-        <h5 className="text-xl font-semibold mb-2">{title}</h5>
-        <p className="text-[#ADB7BE]">{description}</p>
+      <div className="p-6 flex-1">
+        <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
+        <p className="text-[#ADB7BE] line-clamp-3">{description}</p>
       </div>
     </div>
   );
