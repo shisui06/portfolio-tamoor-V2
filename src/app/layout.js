@@ -11,7 +11,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} bg-fixed bg-cover bg-center`}
+        style={{
+          backgroundImage: "url('/images/background-image/artistic-blurry-colorful-wallpaper-background-5.jpg')",
+        }}
+      >
+        <div className="bg-black/50 backdrop-blur-sm min-h-screen">
+          {children}
+        </div>
+      </body>
     </html>
   )
 }

@@ -11,7 +11,7 @@ const AboutSection = () => {
             src="/images/about-image.jpg" 
             width={600} 
             height={600}
-            className="rounded-xl object-cover w-full h-full " 
+            className="rounded-xl object-cover w-full h-full" 
             alt="About Me"
           />
         </div>
