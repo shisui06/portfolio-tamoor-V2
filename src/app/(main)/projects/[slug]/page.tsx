@@ -49,14 +49,14 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
         </ul>
       </div>
 
-      {/* Section Captures d'écran */}
+      {/* Section Captures d&apos;écran */}
       <div>
-        <h2 className="text-2xl font-bold mb-4">Captures d'écran</h2>
+        <h2 className="text-2xl font-bold mb-4">Captures d&apos;écran</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="relative h-64 rounded-lg overflow-hidden">
             <Image
               src={project.image}
-                alt={`Capture d&apos;écran de ${project.title}`}
+                alt={`Capture d&apos;&eacute;cran de ${project.title}`}
               fill
               className="object-cover"
             />

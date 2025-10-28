@@ -23,7 +23,7 @@ export default function Footer() {
               href="#"
               className="text-gray-300 hover:text-white transition-colors"
             >
-              Conditions d'utilisation
+              Conditions d&apos;utilisation
             </Link>
           </div>
         </div>
