@@ -7,7 +7,7 @@ export default function TimelineDemo() {
       content: (
         <div className="text-base">
           <p className="font-bold mb-4">
-            Représentant du service clientèle 2016 - 2024
+            Repr&eacute;sentant du service client&egrave;le 2016 - 2024
           </p>
           <p className="mb-4">
             - Diagnostiquer les problèmes avec le système d'alarme ainsi que les produits d'automatisation
@@ -51,7 +51,7 @@ export default function TimelineDemo() {
       content: (
         <div className="text-base">
           <p className="font-bold mb-4">
-            Représentant du service clientèle 2010-2011
+            Repr&eacute;sentant du service client&egrave;le 2010-2011
           </p>
           <p className="mb-4">
             - Vendre des appareils électroniques et cellulaires

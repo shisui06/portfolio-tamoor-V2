@@ -40,7 +40,7 @@ export default function Navbar({ onSectionChange }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const [activeSection, setActiveSection] = useState<string | null>(null);
-  const router = useRouter();
+
 
   const handleNavClick = (index: number) => {
     try {

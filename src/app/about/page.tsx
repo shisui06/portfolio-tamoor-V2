@@ -1,7 +1,6 @@
 // Page "À propos" (route "/about")
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { Timeline } from "@/components/ui/timeline";
-import Image from "next/image";
 import { LogoCarousel } from "@/components/logo-carousel";
 
 export default function About() {

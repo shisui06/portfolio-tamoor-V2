@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { projectsData } from "@/data/projects";
 import { ThreeDCard } from "@/components/ui/3d-card";
 import LogoCarousel from "@/components/custom/LogoCarousel";
-import ProjectTag from "@/components/ProjectTag";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 
 

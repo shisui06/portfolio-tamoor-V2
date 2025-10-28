@@ -16,11 +16,8 @@ export default function ProjectCard({
   title,
   description,
   imgUrl,
-  gitUrl,
-  previewUrl,
   slug,
 }: ProjectCardProps) {
-  const router = useRouter();
 
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();

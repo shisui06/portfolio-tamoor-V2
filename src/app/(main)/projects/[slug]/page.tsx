@@ -15,7 +15,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
   return (
     <div className="container mx-auto p-4 space-y-12">
       <h1 className="text-center text-4xl font-bold text-white mb-8">
-        Détails du projet
+        D&eacute;tails du projet
       </h1>
       {/* Section Titre et Description */}
       <div className="text-center">

@@ -6,25 +6,9 @@ import React from "react";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import { LanguageProvider } from '@/context/LanguageContext';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 const cinzel = Cinzel({
   subsets: ['latin'],
   variable: '--font-cinzel',
-});
-
-const bebasNeue = Bebas_Neue({
-  subsets: ['latin'],
-  variable: '--font-bebas-neue',
-  weight: '400',
 });
 
 const cormorantGaramond = Cormorant_Garamond({

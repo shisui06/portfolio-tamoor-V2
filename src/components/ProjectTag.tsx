@@ -11,7 +11,6 @@ const ProjectTag: React.FC<ProjectTagProps> = ({
   name,
   onClick,
   isSelected,
-  className,
 }) => {
   return (
     <button

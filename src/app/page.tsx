@@ -20,7 +20,7 @@ export default function Home() {
     <div 
       className="min-h-screen"
       style={{
-        backgroundImage: "url('/public/background/bg1.jpeg')",
+        backgroundImage: "url('/background/bg1.jpeg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
