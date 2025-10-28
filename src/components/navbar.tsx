@@ -126,7 +126,8 @@ export default function Navbar({ onSectionChange }: NavbarProps) {
   }, []);
 
   // Add glowing underline style
-  const activeLinkStyle = "relative after:absolute after:left-0 after:bottom-[-2px] after:h-[2px] after:w-full after:bg-white after:rounded-full after:shadow-[0_0_8px_2px_rgba(255,255,255,0.8)] hover:after:opacity-50";
+  const activeLinkStyle = "relative after:absolute after:left-0 after:bottom-[-2px] after:h-[2px] after:w-full after:bg-white after:rounded-full after:shadow-[0_0_8px_2px_rgba(255,255,255,0.8)]";
+  const glowStyle = "hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all duration-300";
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800">
@@ -154,8 +155,8 @@ export default function Navbar({ onSectionChange }: NavbarProps) {
                   key={item.path}
                   onClick={() => handleNavClick(index)}
                   className={`relative text-jg font-large transition-colors ${
-                    isActive ? 'text-white' : 'text-gray-300 hover:text-white hover:after:opacity-50'
-                  } ${isActive ? activeLinkStyle : ''}`}
+                    isActive ? 'text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]' : 'text-gray-300 hover:text-white'
+                  } ${isActive ? activeLinkStyle : ''} ${glowStyle}`}
                 >
                   {item.name}
                 </button>
@@ -232,9 +233,9 @@ export default function Navbar({ onSectionChange }: NavbarProps) {
                     }}
                     className={`block px-3 py-2 rounded-md text-base font-medium ${
                       isActive
-                        ? "text-white bg-gray-900"
+                        ? "text-white bg-gray-900 drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]"
                         : "text-gray-300 hover:text-white hover:bg-gray-700"
-                    } ${isActive ? activeLinkStyle : ''} hover:after:opacity-50`}
+                    } ${isActive ? activeLinkStyle : ''} ${glowStyle}`}
                   >
                     {item.name}
                   </button>

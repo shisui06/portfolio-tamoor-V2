@@ -1,7 +1,7 @@
 "use client";
 import { Geist, Geist_Mono,Cinzel, Bebas_Neue, Cormorant_Garamond } from 'next/font/google';
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/navbar";
 import React from "react";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import { LanguageProvider } from '@/context/LanguageContext';
