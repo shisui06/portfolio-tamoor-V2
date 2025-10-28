@@ -4,7 +4,7 @@ import { projectsData } from "@/data/projects";
 import { FlipWords } from "@/components/ui/flip-words";
 
 export default function ProjectDetailPage({ params }: { params: { slug: string } }) {
-  const project = projectsData.find(p => p.slug === params.slug);
+  const project = projectsData.find(p => p.id === parseInt(params.slug));
 
   if (!project) {
     notFound();
@@ -28,8 +28,8 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
       <div>
         <h2 className="text-2xl font-bold mb-4">Technologies Utilisées</h2>
         <div className="flex flex-wrap gap-2">
-          {project.technologies.map((tech, index) => (
-            <span 
+          {project.tag.map((tech: string, index: number) => (
+            <span
               key={index}
               className="bg-gray-800 text-white px-3 py-1 rounded-full text-sm"
             >
@@ -43,11 +43,9 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
       <div>
         <h2 className="text-2xl font-bold mb-4">Défis Rencontrés</h2>
         <ul className="list-disc list-inside space-y-2">
-          {project.challenges.map((challenge, index) => (
-            <li key={index} className="text-gray-400">
-              {challenge}
-            </li>
-          ))}
+          <li className="text-gray-400">
+            Défis spécifiques à ce projet à venir...
+          </li>
         </ul>
       </div>
 
@@ -55,16 +53,14 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
       <div>
         <h2 className="text-2xl font-bold mb-4">Captures d'écran</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {project.images.map((image, index) => (
-            <div key={index} className="relative h-64 rounded-lg overflow-hidden">
-              <Image
-                src={image}
-                alt={`Capture d'écran ${index + 1} de ${project.title}`}
-                fill
-                className="object-cover"
-              />
-            </div>
-          ))}
+          <div className="relative h-64 rounded-lg overflow-hidden">
+            <Image
+              src={project.image}
+                alt={`Capture d&apos;écran de ${project.title}`}
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
 
@@ -97,6 +93,6 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
 
 export async function generateStaticParams() {
   return projectsData.map(project => ({
-    slug: project.slug,
+    slug: project.id.toString(),
   }));
-} 
+}

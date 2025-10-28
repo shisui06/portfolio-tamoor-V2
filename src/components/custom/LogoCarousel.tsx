@@ -2,6 +2,7 @@
 
 import { LogoCarousel, type Logo } from "@/components/logo-carousel"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import Image from "next/image"
 
 export default function Home() {
   const columnCount = 5;
@@ -9,107 +10,116 @@ export default function Home() {
   const logos: Logo[] = [
     
 
-    { name: "Html", 
-      id: 1, 
+    { name: "Html",
+      id: 1,
       img: () => (
-        <img 
-          src="/images/stackicon/html.svg" 
-          alt="html" 
-          className="w-20 h-20"
+        <Image
+          src="/images/stackicon/html.svg"
+          alt="html"
+          width={80}
+          height={80}
           style={{ objectFit: 'contain' }}
         />
       )
       },
-      { name: "css", 
-        id: 2, 
+      { name: "css",
+        id: 2,
         img: () => (
-          <img 
-            src="/images/stackicon/css.png" 
-            alt="css" 
-            className="w-20 h-20"
+          <Image
+            src="/images/stackicon/css.png"
+            alt="css"
+            width={80}
+            height={80}
             style={{ objectFit: 'contain' }}
           />
         )
         },
-        { name: "js", 
-          id: 3, 
-          img: () => (
-            <img 
-              src="/images/stackicon/js.png" 
-              alt="javascript" 
-              className="w-20 h-20"
-              style={{ objectFit: 'contain' }}
-            />
-          )
-          },
-          
-          { name: "react", 
-            id: 4, 
+          { name: "js",
+            id: 3,
             img: () => (
-              <img 
-                src="/images/stackicon/react.png" 
-                alt="raect" 
-                className="w-20 h-20"
+              <Image
+                src="/images/stackicon/js.png"
+                alt="javascript"
+                width={80}
+                height={80}
                 style={{ objectFit: 'contain' }}
               />
             )
             },
-
-            { name: "tailwind", 
-              id: 5, 
+          
+            { name: "react",
+              id: 4,
               img: () => (
-                <img 
-                  src="/images/stackicon/tailwind.png" 
-                  alt="tailwind" 
-                  className="w-20 h-20"
+                <Image
+                  src="/images/stackicon/react.png"
+                  alt="react"
+                  width={80}
+                  height={80}
                   style={{ objectFit: 'contain' }}
                 />
               )
               },
 
-            { name: "nextjs", 
-              id: 6, 
-              img: () => (
-                <img 
-                  src="/images/stackicon/next.js.svg" 
-                  alt="nextjs" 
-                  className="w-20 h-20"
-                  style={{ objectFit: 'contain' }}
-                />
-              )
-              },
-              { 
-                name: "MySQL", 
-                id: 7, 
+              { name: "tailwind",
+                id: 5,
                 img: () => (
-                  <img 
-                    src="/images/stackicon/mysql.svg" 
-                    alt="mysql" 
-                    className="w-22 h-22"
+                  <Image
+                    src="/images/stackicon/tailwind.png"
+                    alt="tailwind"
+                    width={80}
+                    height={80}
+                    style={{ objectFit: 'contain' }}
+                  />
+                )
+                },
+
+              { name: "nextjs",
+                id: 6,
+                img: () => (
+                  <Image
+                    src="/images/stackicon/next.js.svg"
+                    alt="nextjs"
+                    width={80}
+                    height={80}
+                    style={{ objectFit: 'contain' }}
+                  />
+                )
+                },
+              {
+                name: "MySQL",
+                id: 7,
+                img: () => (
+                  <Image
+                    src="/images/stackicon/mysql.svg"
+                    alt="mysql"
+                    width={88}
+                    height={88}
                     style={{ objectFit: 'contain' }}
                   />
                 )
               },
-              { 
-                name: "mongodb", 
-                id: 8, 
+              {
+                name: "mongodb",
+                id: 8,
                 img: () => (
-                  <img 
-                    src="/images/stackicon/mongodb.svg" 
-                    alt="mongodb" 
-                    className="w-20 h-20"
+                  <Image
+                    src="/images/stackicon/mongodb.svg"
+                    alt="mongodb"
+                    width={80}
+                    height={80}
                     style={{ objectFit: 'contain' }}
                   />
                 )
               },
-              { 
-                name: "linux", 
-                id: 9, 
+              {
+                name: "linux",
+                id: 9,
                 img: () => (
-                  <img 
-                    src="/images/stackicon/linux.svg" 
-                    alt="linux" 
-                    className="w-20 h-20"
+                  <Image
+                    src="/images/stackicon/linux.svg"
+                    alt="linux"
+                    width={80}
+                    height={80}
                     style={{ objectFit: 'contain' }}
                   />
                 )

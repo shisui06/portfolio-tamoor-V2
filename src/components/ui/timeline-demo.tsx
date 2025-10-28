@@ -10,7 +10,7 @@ export default function TimelineDemo() {
             Repr&eacute;sentant du service client&egrave;le 2016 - 2024
           </p>
           <p className="mb-4">
-            - Diagnostiquer les problèmes avec le système d'alarme ainsi que les produits d'automatisation
+            - Diagnostiquer les problèmes avec le système d&apos;alarme ainsi que les produits d&apos;automatisation
           </p>
           <p className="mb-4">
             - Résoudre le problème le plus rapidement possible et offrir une expérience client extraordinaire
@@ -32,16 +32,16 @@ export default function TimelineDemo() {
           Adjointe Administrative 2012-2015
           </p>
           <p className="mb-4">
-            - Accueillir les nouveaux parents de manière professionnelle et atteindre le taux d'occupation
+            - Accueillir les nouveaux parents de manière professionnelle et atteindre le taux d&apos;occupation
           </p>
           <p className="mb-4">
             - Préparer des documents administratifs de qualité et effectuer des dépôts bancaires
           </p>
           <p className="mb-4">
-            - Entretenir le bâtiment et s'assurer que les locaux sont sécuritaires et propres prêts à être inspectés
+            - Entretenir le bâtiment et s&apos;assurer que les locaux sont sécuritaires et propres prêts à être inspectés
           </p>
           <p>
-            - Assurer le bon fonctionnement de la garderie et mettre en œuvre un plan d'action réussi selon les normes du ministre de la Famille
+            - Assurer le bon fonctionnement de la garderie et mettre en œuvre un plan d&apos;action réussi selon les normes du ministre de la Famille
           </p>
         </div>
       ),
@@ -60,7 +60,7 @@ export default function TimelineDemo() {
             - Aidez les gens à choisir les forfaits adaptés à leurs téléphones portables
           </p>
           <p className="mb-4">
-            - Proposer les avantages apportés par l'entreprise et répondre aux objectifs de vente
+            - Proposer les avantages apportés par l&apos;entreprise et répondre aux objectifs de vente
           </p>
         </div>
       ),

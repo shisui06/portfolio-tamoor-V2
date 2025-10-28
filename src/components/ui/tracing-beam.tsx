@@ -1,10 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
-import {
-  useTransform,
-  useScroll,
-  useSpring,
-} from "framer-motion";
+import React, { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
 export const TracingBeam = ({
@@ -15,18 +10,10 @@ export const TracingBeam = ({
   className?: string;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
   const contentRef = useRef<HTMLDivElement>(null);
-  const [svgHeight, setSvgHeight] = useState(0);
 
   useEffect(() => {
-    if (contentRef.current) {
-      setSvgHeight(contentRef.current.offsetHeight);
-    }
+    // Component logic can be added here if needed
   }, []);
 
 

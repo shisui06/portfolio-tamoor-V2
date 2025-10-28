@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 interface ProjectCardProps {
@@ -9,14 +8,12 @@ interface ProjectCardProps {
   imgUrl: string;
   gitUrl?: string;
   previewUrl?: string;
-  slug: string;
 }
 
 export default function ProjectCard({
   title,
   description,
   imgUrl,
-  slug,
 }: ProjectCardProps) {
 
   const handleClick = (e: React.MouseEvent) => {
