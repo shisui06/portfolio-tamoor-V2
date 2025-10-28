@@ -277,7 +277,7 @@ export { TextRotate }
 
 function Preview() {
   return (
-    <div className="w-full h-full text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl flex flex-col items-center justify-center font-overusedGrotesk text-white font-bold overflow-hidden p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12">
+    <div className="w-full h-full text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl flex flex-col items-center justify-center font-overusedGrotesk text-white font-bold overflow-hidden p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10">
       <LayoutGroup>
         <motion.div className="flex flex-col whitespace-pre" layout>
           <motion.span
@@ -289,14 +289,14 @@ function Preview() {
           </motion.span>
           <TextRotate
             texts={[
-              { text: "Âme", icon: <FaHeart className="inline- w-12 h-12 m-4"  /> },
-              { text: "Entité", icon: <FaGhost className="inline-block w-12 h-12 m-4" /> },
-              { text: "Humain", icon: <FaUser className="inline-block w-12 h-12 m-4" /> },
-              { text: "Créature", icon: <FaBug className="inline-block w-12 h-12 m-4" /> },
-              { text: "Ami", icon: <FaHeart className="inline-block w-12 h-12 m-4" /> },
-              { text: "IA", icon: <FaRobot className="inline-block w-12 h-12 m-4"  /> },
+              { text: "Âme", icon: <FaHeart className="inline- w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 m-2 sm:m-3 md:m-4"  /> },
+              { text: "Entité", icon: <FaGhost className="inline-block w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 m-2 sm:m-3 md:m-4" /> },
+              { text: "Humain", icon: <FaUser className="inline-block w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 m-2 sm:m-3 md:m-4" /> },
+              { text: "Créature", icon: <FaBug className="inline-block w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 m-2 sm:m-3 md:m-4" /> },
+              { text: "Ami", icon: <FaHeart className="inline-block w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 m-2 sm:m-3 md:m-4" /> },
+              { text: "IA", icon: <FaRobot className="inline-block w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 m-2 sm:m-3 md:m-4"  /> },
             ]}
-            mainClassName="text-white px-2 sm:px-3 md:px-4 lg:px-5 bg-black/50 backdrop-blur-md overflow-hidden py-0.5 sm:py-1 md:py-1.5 lg:py-2 justify-center rounded-lg text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
+            mainClassName="text-white px-1 sm:px-2 md:px-3 lg:px-4 bg-black/50 backdrop-blur-md overflow-hidden py-0.5 sm:py-1 md:py-1.5 lg:py-2 justify-center rounded-lg text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl w-full sm:w-3/4 md:w-2/4"
             staggerFrom={"last"}
             initial={{ y: "100%" }}
             animate={{ y: 0 }}

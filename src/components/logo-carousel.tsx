@@ -51,7 +51,7 @@ const LogoColumn: React.FC<LogoColumnProps> = React.memo(({ logos, index, curren
 
   return (
     <motion.div
-      className="relative h-14 w-24 overflow-hidden md:h-24 md:w-48"
+      className="relative h-14 w-10 overflow-hidden md:h-24 md:w-48"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
