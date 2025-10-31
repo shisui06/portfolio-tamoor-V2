@@ -2,16 +2,11 @@
 import React, { useState } from "react";
 import { projectsData } from "@/data/projects";
 import { ThreeDCard } from "@/components/ui/3d-card";
-import LogoCarousel from "@/components/custom/LogoCarousel";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 
 
 export function ProjectsSection() {
   const [filter, setFilter] = useState("All");
-  const logos = [
-    { id: 1, name: "Logo 1", img: "/logos/logo1.png" },
-    { id: 2, name: "Logo 2", img: "/logos/logo2.png" },
-  ];
 
   const filteredProjects = projectsData.filter((project) =>
     filter === "All" ? true : project.tag.includes(filter)
@@ -59,7 +54,6 @@ export function ProjectsSection() {
             />
           ))}
         </div>
-        <LogoCarousel logos={logos} />
       </div>
     </section>
   );

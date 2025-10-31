@@ -19,14 +19,14 @@ import { FaHeart, FaGhost, FaUser, FaBug, FaRobot } from 'react-icons/fa';
 import { cn } from "@/lib/utils"
 
 interface TextRotateProps {
-  texts: (string | { text: string; icon: JSX.Element })[];
+  texts: (string | { text: string; icon: React.ReactElement })[];
   rotationInterval?: number
   initial?: MotionProps["initial"]
   animate?: MotionProps["animate"]
   exit?: MotionProps["exit"]
   animatePresenceMode?: AnimatePresenceProps["mode"]
 
-  
+
   animatePresenceInitial?: boolean
   staggerDuration?: number
   staggerFrom?: "first" | "last" | "center" | number | "random"
@@ -50,7 +50,7 @@ export interface TextRotateRef {
 interface WordObject {
   characters: string[]
   needsSpace: boolean
-  icon?: JSX.Element
+  icon?: React.ReactElement
 }
 
 const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
@@ -217,7 +217,7 @@ const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
             ).map((wordObj, wordIndex, array) => {
               const previousCharsCount = array
                 .slice(0, wordIndex)
-                .reduce((sum, word) => sum + word.characters.length, 0)
+                .reduce((sum, word) => sum + (word as WordObject).characters.length, 0)
 
               return (
                 <motion.span
@@ -225,7 +225,7 @@ const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
                   className={cn("inline-flex items-center", splitLevelClassName)}
                   style={{ overflow: "hidden" }}
                 >
-                  {wordObj.icon && (
+                  {(wordObj as WordObject).icon && (
                     <motion.span
                       className="inline-flex items-center mr-2"
                       initial={initial}
@@ -233,21 +233,23 @@ const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
                       exit={exit}
                       transition={transition}
                     >
-                      {wordObj.icon}
+                      {(wordObj as WordObject).icon}
                     </motion.span>
                   )}
                   {wordObj.characters.map((char, charIndex) => (
                     <motion.span
-                      initial={{ ...initial, y: "100%" }}
-                      animate={{ ...animate, y: 0 }}
-                      exit={{ ...exit, y: "-100%" }}
+                      initial={{ y: "100%", opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: "-120%", opacity: 0 }}
                       key={charIndex}
                       transition={{
-                        ...transition,
+                        type: "spring",
+                        damping: 25,
+                        stiffness: 300,
                         delay: getStaggerDelay(
                           previousCharsCount + charIndex,
                           array.reduce(
-                            (sum, word) => sum + word.characters.length,
+                            (sum, word) => sum + (word as WordObject).characters.length,
                             0
                           )
                         ),

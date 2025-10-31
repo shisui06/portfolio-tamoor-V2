@@ -1,12 +1,12 @@
 "use client"
 
-import React, { useCallback, useEffect, useMemo, useState } from "react"
+import React, { useCallback, useEffect, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 
 export interface Logo {
   name: string
   id: number
-  img: React.ComponentType<React.SVGProps<SVGSVGElement>>
+  img: string
 }
 
 interface LogoColumnProps {
@@ -47,7 +47,6 @@ const LogoColumn: React.FC<LogoColumnProps> = React.memo(({ logos, index, curren
   const columnDelay = index * 200
   const adjustedTime = (currentTime + columnDelay) % (cycleInterval * logos.length)
   const currentIndex = Math.floor(adjustedTime / cycleInterval)
-  const CurrentLogo = useMemo(() => logos[currentIndex].img, [logos, currentIndex])
 
   return (
     <motion.div
@@ -89,7 +88,7 @@ const LogoColumn: React.FC<LogoColumnProps> = React.memo(({ logos, index, curren
             },
           }}
         >
-          <CurrentLogo className="h-20 w-20 max-h-[80%] max-w-[80%] object-contain md:h-32 md:w-32" />
+          <img src={logos[currentIndex].img} alt={logos[currentIndex].name} className="h-20 w-20 max-h-[80%] max-w-[80%] object-contain md:h-32 md:w-32" />
         </motion.div>
       </AnimatePresence>
     </motion.div>

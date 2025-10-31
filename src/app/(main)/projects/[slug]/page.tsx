@@ -3,8 +3,9 @@ import Image from 'next/image';
 import { projectsData } from "@/data/projects";
 import { FlipWords } from "@/components/ui/flip-words";
 
-export default function ProjectDetailPage({ params }: { params: { slug: string } }) {
-  const project = projectsData.find(p => p.id === parseInt(params.slug));
+export default async function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const project = projectsData.find(p => p.id === parseInt(slug));
 
   if (!project) {
     notFound();

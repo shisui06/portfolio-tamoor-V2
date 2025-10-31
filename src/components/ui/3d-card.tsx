@@ -5,12 +5,13 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
-interface ThreeDCardProps extends React.HTMLAttributes<HTMLDivElement> {
+interface ThreeDCardProps {
   title?: string;
   description?: string;
   imageUrl?: string;
   link?: string;
   buttonText?: string;
+  className?: string;
 }
 
 export const ThreeDCard = React.forwardRef<HTMLDivElement, ThreeDCardProps>(
@@ -26,6 +27,9 @@ export const ThreeDCard = React.forwardRef<HTMLDivElement, ThreeDCardProps>(
           scale: 1.05,
           transition: { duration: 0.3 },
         }}
+        drag
+        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+        dragElastic={0.1}
         {...props}
       >
         <motion.div

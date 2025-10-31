@@ -8,7 +8,11 @@ export const ShimmerButton = ({
   className,
   onClick,
   ...props
-}: React.ButtonHTMLAttributes<HTMLButtonElement>) => {
+}: {
+  children: React.ReactNode;
+  className?: string;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+}) => {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     try {
       onClick?.(e);
