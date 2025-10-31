@@ -2,129 +2,21 @@
 
 import { LogoCarousel, type Logo } from "@/components/logo-carousel"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import Image from "next/image"
 
 export default function Home() {
   const columnCount = 5;
 
   const logos: Logo[] = [
-    
-
-    { name: "Html",
-      id: 1,
-      img: () => (
-        <Image
-          src="/images/stackicon/html.svg"
-          alt="html"
-          width={80}
-          height={80}
-          style={{ objectFit: 'contain' }}
-        />
-      )
-      },
-      { name: "css",
-        id: 2,
-        img: () => (
-          <Image
-            src="/images/stackicon/css.png"
-            alt="css"
-            width={80}
-            height={80}
-            style={{ objectFit: 'contain' }}
-          />
-        )
-        },
-          { name: "js",
-            id: 3,
-            img: () => (
-              <Image
-                src="/images/stackicon/js.png"
-                alt="javascript"
-                width={80}
-                height={80}
-                style={{ objectFit: 'contain' }}
-              />
-            )
-            },
-          
-            { name: "react",
-              id: 4,
-              img: () => (
-                <Image
-                  src="/images/stackicon/react.png"
-                  alt="react"
-                  width={80}
-                  height={80}
-                  style={{ objectFit: 'contain' }}
-                />
-              )
-              },
-
-              { name: "tailwind",
-                id: 5,
-                img: () => (
-                  <Image
-                    src="/images/stackicon/tailwind.png"
-                    alt="tailwind"
-                    width={80}
-                    height={80}
-                    style={{ objectFit: 'contain' }}
-                  />
-                )
-                },
-
-              { name: "nextjs",
-                id: 6,
-                img: () => (
-                  <Image
-                    src="/images/stackicon/next.js.svg"
-                    alt="nextjs"
-                    width={80}
-                    height={80}
-                    style={{ objectFit: 'contain' }}
-                  />
-                )
-                },
-              {
-                name: "MySQL",
-                id: 7,
-                img: () => (
-                  <Image
-                    src="/images/stackicon/mysql.svg"
-                    alt="mysql"
-                    width={88}
-                    height={88}
-                    style={{ objectFit: 'contain' }}
-                  />
-                )
-              },
-              {
-                name: "mongodb",
-                id: 8,
-                img: () => (
-                  <Image
-                    src="/images/stackicon/mongodb.svg"
-                    alt="mongodb"
-                    width={80}
-                    height={80}
-                    style={{ objectFit: 'contain' }}
-                  />
-                )
-              },
-              {
-                name: "linux",
-                id: 9,
-                img: () => (
-                  <Image
-                    src="/images/stackicon/linux.svg"
-                    alt="linux"
-                    width={80}
-                    height={80}
-                    style={{ objectFit: 'contain' }}
-                  />
-                )
-              }
-]
+    { name: "Html", id: 1, img: "/images/stackicon/html.svg" },
+    { name: "css", id: 2, img: "/images/stackicon/css.png" },
+    { name: "js", id: 3, img: "/images/stackicon/js.png" },
+    { name: "react", id: 4, img: "/images/stackicon/react.png" },
+    { name: "tailwind", id: 5, img: "/images/stackicon/tailwind.png" },
+    { name: "nextjs", id: 6, img: "/images/stackicon/next.js.svg" },
+    { name: "MySQL", id: 7, img: "/images/stackicon/mysql.svg" },
+    { name: "mongodb", id: 8, img: "/images/stackicon/mongodb.svg" },
+    { name: "linux", id: 9, img: "/images/stackicon/linux.svg" }
+  ]
 
   return (
     <main className="flex flex-col items-center justify-center p-4 md:p-24">
